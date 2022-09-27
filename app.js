@@ -20,7 +20,7 @@ app.post('/process', upload.single('spreadsheet'), async function (req, res, nex
   form.append('file', spreadsheet.buffer, spreadsheet.originalname);
 
   try {
-    const result = await axios.post('http://sullivls.pythonanywhere.com/upload', form, { headers: form.getHeaders()});
+    const result = await axios.post('http://converter-service-app.default.svc.cluster.local/upload', form, { headers: form.getHeaders()});
     if (result.status === 200) {
       responseMessage = `${spreadsheet.originalname} was processed successfully!`;
     } else {
