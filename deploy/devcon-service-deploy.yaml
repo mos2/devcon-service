@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: devcon-service
-        image: mjjos1/devcon-service:0.9.6
+        image: mjjos1/devcon-service:0.9.9
         ports:
         - containerPort: 3000
